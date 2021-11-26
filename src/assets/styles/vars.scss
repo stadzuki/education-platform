@@ -1,0 +1,27 @@
+app-root[data-theme='dark'] {
+  --drawer-container-bg-color: #0f0f13;
+
+  --drawer-bg-color: #0f0f13;
+  --drawer-text-color: #fff;
+  --drawer-text-color-active: #fff;
+
+  --drawer-content-bg-color: #191c28;
+  --drawer-content-text-color: #fff;
+  --input-color: #fff;
+
+  --card-btn-color: #fff;
+}
+
+app-root[data-theme='light'] {
+  --drawer-container-bg-color: #f4f4f4;
+
+  --drawer-bg-color: #4a6fff;
+  --drawer-text-color: #fff;
+  --drawer-text-color-active: #000;
+
+  --drawer-content-bg-color: #fff;
+  --drawer-content-text-color: #000;
+  --input-color: #f4f4f4;
+
+  --card-btn-color: #4a6fff;
+}

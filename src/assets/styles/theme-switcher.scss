@@ -1,0 +1,71 @@
+.switch-wrapper {
+  --light-color: #f9fafb;
+  --dark-color: #1f2937;
+  --border-color: #9ca3af;
+  --border-width: 2px;
+  --icon-size: 25px;
+
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+
+  .switch {
+    display: none;
+
+    & + div {
+      position: relative;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background-color: var(--light-color);
+      overflow: hidden;
+      cursor: pointer;
+      transition: all 200ms ease-in;
+
+      .moon,
+      .sun {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        width: var(--icon-size);
+        height: var(--icon-size);
+        transition: all 350ms cubic-bezier(.51,.37,.26,.87);
+        transform-origin: 50% 100%;
+      }
+
+      .moon {
+        color: var(--light-color);
+        opacity: 0;
+        transform: rotate(90deg);
+      }
+
+      .sun {
+        color: var(--dark-color);
+      }
+    }
+
+    &:hover {
+      border-color: var(--border-color);
+    }
+
+    &:checked {
+      & + div {
+        background-color: var(--dark-color);
+        border-color: transparent;
+
+        .moon {
+          opacity: 1;
+          transform: rotate(0);
+        }
+
+        .sun {
+          opacity: 0;
+          transform: rotate(-90deg);
+        }
+      }
+    }
+  }
+}
