@@ -1,4 +1,4 @@
-<mat-drawer-container class="example-container">
+<mat-drawer-container class="example-container" *ngIf="!isRouteHiddenSideNav()">
   <mat-drawer mode="side" opened>
     <div class="drawer-logo">
       <img src="./assets/img/logo.png" alt="" width="56" height="56">
@@ -60,3 +60,9 @@
     <router-outlet></router-outlet>
   </mat-drawer-content>
 </mat-drawer-container>
+
+<!--<ng-template #onlyRouteView>-->
+<ng-container *ngIf="isRouteHiddenSideNav()">
+  <router-outlet></router-outlet>
+</ng-container>
+<!--</ng-template>-->
