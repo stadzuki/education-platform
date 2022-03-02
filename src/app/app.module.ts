@@ -5,12 +5,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {AppRoutingModule} from "./app-routing.module";
 import {SharedModule} from "./@shared/shared.module";
 import {CoreModule} from "./@core/core.module";
-import { AppLoadingComponent } from './@views/app-loading/app-loading.component';
+import { AddLecturesComponent } from './@views/add-lectures/add-lectures.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AppLoadingComponent,
+    AddLecturesComponent
   ],
   imports: [
     BrowserModule,

@@ -19,12 +19,12 @@ export class AppComponent implements OnInit {
     }
 
     ngOnInit(): void {
-        this.userService.getUser()
-            .subscribe((response) => {
-
-            }, (error) => {
-                this.router.navigateByUrl('/auth')
-            })
+        // this.userService.getUser()
+        //     .subscribe((response) => {
+        //
+        //     }, (error) => {
+        //         this.router.navigateByUrl('/auth')
+        //     })
     }
 
     changeThemePage() {
